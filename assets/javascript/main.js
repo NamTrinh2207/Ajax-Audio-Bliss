@@ -76,7 +76,7 @@ const app = {
             background: './assets/img/songs/1.webp',
             name: 'Chạy Về Khóc Với Anh',
             singer: 'Erik, Duzme Remix',
-            pathSong: './assets/music/list-song/1.mp3',
+            pathSong: './assets/music/list-song/NamEnglish.m4a',
             duration : '04:05',
         },
         {

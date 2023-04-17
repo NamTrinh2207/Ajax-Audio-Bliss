@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Thêm singer</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Singer</h1>
+<form>
+    <label for="singerName"></label>
+    <input type="text" id="singerName" ><br>
+
+    <label for="gender"></label>
+    <input type="tel" id="gender" ><br>
+
+    <label for="birthday"></label>
+    <input type="date" id="birthday" ><br>
+
+    <label for="story"></label>
+    <input type="text" id="story" ><br>
+
+    <label for="otherInformation"></label>
+    <input type="text" id="otherInformation" ><br>
+
+    <label for="image"></label>
+    <input type="file" id="image" name="image" accept="image/*"><br>
+
+    <br><br>
+    <input type="submit" onclick="createSinger()" value="Create">
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="singer.js"></script>
+</body>
+</html>
