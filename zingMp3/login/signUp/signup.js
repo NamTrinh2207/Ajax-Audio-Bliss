@@ -1,4 +1,3 @@
-//create
 function save() {
     event.preventDefault();
     let name = $("#name").val();
@@ -7,27 +6,29 @@ function save() {
     let address = $("#address").val();
     let username = $("#username").val();
     let password = $("#password").val();
+    let avatar = $("#avatar")[0].files[0];
     let roles = $("#roles").val();
-    let user = {
-        "name" : name,
-        "phone" : phone,
-        "email" : email,
-        "address" : address,
-        "username" : username,
-        "password" : password,
-        "roles" : [roles]
-    };
+    let user = new FormData();
+    user.append("name", name);
+    user.append("phone", phone);
+    user.append("email", email);
+    user.append("address", address);
+    user.append("username", username);
+    user.append("password", password);
+    user.append("avatar", avatar);
+    user.append("roles", roles);
     $.ajax({
         headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Accept': 'application/json'
         },
         type: "POST",
         url: "http://localhost:8080/signup",
-        data: JSON.stringify(user),
+        data: user,
+        contentType: false,
+        processData: false,
         success: function (data) {
-            alert("Đăng ký thành công")
-            window.location.href = "../login/login.html"
+            alert(data.message);
+            window.location.href = "../login/login.html";
         },
         error: function () {
             alert("Đăng ký không thành công!");
