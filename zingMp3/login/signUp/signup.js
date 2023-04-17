@@ -27,10 +27,10 @@ function save() {
         data: JSON.stringify(user),
         success: function (data) {
             alert("Đăng ký thành công")
-            console.log(data)
+            window.location.href = "../login/login.html"
         },
         error: function () {
-            alert("Không thể thêm user!");
+            alert("Đăng ký không thành công!");
         }
     });
 }
