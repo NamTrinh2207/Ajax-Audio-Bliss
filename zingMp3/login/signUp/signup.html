@@ -66,36 +66,40 @@
                 <div class="container">
                     <form>
                         <div class="form-group">
-                            <label for="name">Họ và tên:</label>
-                            <input type="text" class="form-control" id="name" name="username" required>
+                            <label for="name">Full name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="username">Tên đăng nhập:</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="avatar">Ảnh đại diện:</label>
+                            <label for="avatar">Avatar:</label>
                             <input type="file" class="form-control" id="avatar" name="avatar" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Mật khẩu:</label>
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <div class="form-group">
-                            <label for="confirm_password">Nhập lại mật khẩu:</label>
+                            <label for="confirm_password">Confirm password:</label>
                             <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
                             <span id='message'></span>
                         </div>
+                        <select hidden="hidden" id="roles" name="roles">
+<!--                            <option value="ROLE_USER">Apple</option>-->
+                            <option value="ROLE_ADMIN">ADMIN</option>
+                        </select>
                         <br>
-                        <button type="submit" class="btn auth-btn" onclick="save()" id="submit_btn">Đăng ký</button>
+                        <button type="submit" class="btn auth-btn" onclick="save()" id="submit_btn">Signup</button>
                     </form>
                 </div>
 
-                <p class="text mb-4">Bereits einen Account? <a href="../../login/login/login.html" class="text-link">Zum
+                <p class="text mb-4">Do you already have an account? <a href="../../login/login/login.html" class="text-link">
                     Login</a></p>
 
             </div>
