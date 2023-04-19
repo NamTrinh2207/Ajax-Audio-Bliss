@@ -26,7 +26,8 @@ function createSinger() {
         processData: false,
         success: function (result) {
             alert("Thêm thành công")
-            console.log(result)
+            let imgUrl = 'assets/img/singer/' + result.image;
+            document.getElementById("image1").setAttribute('src',imgUrl);
         },
         error: function () {
             alert("Không thể thêm singer!");
