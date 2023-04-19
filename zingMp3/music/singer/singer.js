@@ -5,14 +5,14 @@ function createSinger() {
     let birthday = $("#birthday").val();
     let story = $("#story").val();
     let otherInformation = $("#otherInformation").val();
-    let image =  $("#image")[0].files[0];
+    let image = $("#image")[0].files[0];
 
     let singer = new FormData();
     singer.append("singerName", singer_name);
     singer.append("gender", gender);
     singer.append("birthday", birthday);
     singer.append("story", story);
-    singer.append("otherInformation",otherInformation);
+    singer.append("otherInformation", otherInformation);
     singer.append("image", image);
 
     $.ajax({
