@@ -12,8 +12,8 @@ if (user != null) {
         type: "GET",
         url: "http://localhost:8080/hello",
         success: function () {
-            let avatarUrl = 'img/files/' + avatar
-            document.getElementById('avatar').setAttribute('src', avatarUrl);
+            let avatarUrl = "img/files/" + avatar
+            document.getElementById("avatar").setAttribute('src', avatarUrl);
             let user;
             user = `<p>${username}</p>`
             document.getElementById("user").innerHTML = user;
