@@ -19,7 +19,7 @@ function uploadMusic() {
             'Accept': 'application/json',
         },
         type: "POST",
-        url: "http://localhost:8080/musics/create",
+        url: "http://localhost:8080/admin/musics/create",
         data: music,
         contentType: false,
         processData: false,

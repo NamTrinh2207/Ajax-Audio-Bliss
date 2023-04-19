@@ -1,7 +1,7 @@
 .page-content {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(45deg, rgb(230, 230, 230), white);
+  background: linear-gradient(45deg, rgb(62, 16, 121), #3e1079);
 }
 
 .auth-card {
@@ -36,8 +36,8 @@
 }
 
 .service-btn:hover {
-  color: #1da19b;
-  border: 1px solid #1da19b;
+  color: #30075b;
+  border: 1px solid #3b0a6e;
 }
 
 .service-icon {
@@ -67,7 +67,7 @@
 }
 
 .auth-btn {
-  background: #45a29e;
+  background: #3b0a6e;
   color: white;
   height: 45px;
   width: 100%;
@@ -76,7 +76,7 @@
 }
 
 .auth-btn:hover {
-  background: #24726e;
+  background: #5a1ca9;
   color: white;
 }
 
