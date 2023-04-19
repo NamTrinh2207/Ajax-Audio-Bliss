@@ -25,7 +25,9 @@
     <!-- icon fontawesome -->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="zingMp3/login/admin/admin.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="zingMp3/login/admin/avatar.js"></script>
+    <script src="zingMp3/music/playlist/playlist.js"></script>
 </head>
 <body>
 <div class="main" style="background-image: url(assets/img/background-theme/backroundThemes/0.svg);">
@@ -431,7 +433,18 @@
                             </div>
                         </ul>
                     </div>
-
+                    <div>
+                        <table>
+                            <tr>
+                                <th>name</th>
+                                <th>description</th>
+                                <th>createdDateTime</th>
+                                <th>lastUpdateTime</th>
+                                <th>view</th>
+                            </tr>
+                            <tbody id="playlist"></tbody>
+                        </table>
+                    </div>
                     <!-- option-all__mv -->
                     <div class="option-all__playlist option-all__margin_bot">
                         <div class="option-heading option-all__playlist-heading">

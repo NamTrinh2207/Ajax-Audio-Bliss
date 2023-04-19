@@ -10,7 +10,7 @@ if (object != null) {
             'Authorization': "Bearer " + token
         },
         type: "GET",
-        url: "http://localhost:8080/admin",
+        url: "http://localhost:8080/hello",
         success: function () {
             let avatarUrl = 'assets/img/user/' + avatar
             document.getElementById('avatar').setAttribute('src', avatarUrl);
@@ -25,6 +25,5 @@ if (object != null) {
 
 function logout() {
     localStorage.removeItem("object")
-    window.location.href = "http://localhost:63343/mp3-front-end/zingMp3/login/login/login.html?_ijt=aodr1kr0ed3lrl1q7a62rdhpn0&_ij_reload=RELOAD_ON_SAVE";
+    window.location.href = "http://localhost:63342/mp3-front-end/zingMp3/login/login/login.html";
 }
-
