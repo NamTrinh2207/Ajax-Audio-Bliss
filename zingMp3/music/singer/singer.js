@@ -26,7 +26,17 @@ function createSinger() {
         processData: false,
         success: function (result) {
             alert("Thêm thành công")
-            console.log(result)
+
+            let imageUrl = URL.createObjectURL(image);
+            localStorage.setItem("singer", JSON.stringify(result));
+
+            localStorage.setItem("singerName", result.singerName);
+            localStorage.setItem("gender", result.gender);
+            localStorage.setItem("birthday", result.birthday);
+            localStorage.setItem("story", result.story);
+            localStorage.setItem("otherInformation", result.otherInformation);
+
+            window.location.href = "singerForm.html";
         },
         error: function () {
             alert("Không thể thêm singer!");
