@@ -15,8 +15,8 @@ function login() {
         data: JSON.stringify(user),
         url: "http://localhost:8080/login",
         success: function (data) {
-            localStorage.setItem("user", JSON.stringify(data));
             console.log(data);
+            localStorage.setItem("user", JSON.stringify(data));
             window.location.href = "../index.html"
         },
         error: function () {
