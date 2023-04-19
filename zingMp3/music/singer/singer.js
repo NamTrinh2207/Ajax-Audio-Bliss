@@ -26,17 +26,24 @@ function createSinger() {
         processData: false,
         success: function (result) {
             alert("Thêm thành công")
-            console.log(result)
+            localStorage.setItem("imgSinger", JSON.stringify(result))
+
+            let imageUrl = URL.createObjectURL(image);
+            $("#singerInformation").html(
+                "<table>"+
+                "<tr>" +
+                "<td style='text-align: left'>Tên ca sĩ:</td>" + "<td>" +result.singerName + "</td>" + "</tr>" +
+                "<td style='text-align: left'>Giới tính:</td>" + "<td>" +result.gender + "</td>" + "</tr>" +
+                "<td style='text-align: left'>Ngày sinh:</td>" + "<td>" +result.birthday + "</td>" + "</tr>" +
+                "<td style='text-align: left'>Quê quán:</td>" + "<td>" +result.story + "</td>" + "</tr>" +
+                "<td style='text-align: left'>Thông tin khác:</td>" + "<td>" +result.otherInformation + "</td>" + "</tr>" +
+
+                "<img width='350' height='350' src='" + imageUrl + "' alt='Ảnh đính kèm'>" +
+                "<table>"
+            )
         },
         error: function () {
-            alert("Không thể thêm singer!");
+            alert("Không thể thêm ca sĩ!");
         }
     });
 }
-
-
-
-
-
-
-
