@@ -20,14 +20,13 @@ function createSinger() {
             'Accept': 'application/json',
         },
         type: "POST",
-        url: "http://localhost:8080/admin/singers/create",
+        url: "http://localhost:8080/singers/create",
         data: singer,
         contentType: false,
         processData: false,
         success: function (result) {
             alert("Thêm thành công")
-            localStorage.setItem("imgSinger", JSON.stringify(result))
-
+            console.log(result)
             let imageUrl = URL.createObjectURL(image);
             $("#singerInformation").html(
                 "<table>"+
