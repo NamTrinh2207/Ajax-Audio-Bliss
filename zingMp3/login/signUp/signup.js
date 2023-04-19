@@ -5,7 +5,7 @@ function save() {
     let email = $("#email").val();
     let address = $("#address").val();
     let username = $("#username").val();
-    let password = $("#password").val();
+    let password = $("#confirm_password").val();
     let avatar = $("#avatar")[0].files[0];
     let roles = $("#roles").val();
     let user = new FormData();
