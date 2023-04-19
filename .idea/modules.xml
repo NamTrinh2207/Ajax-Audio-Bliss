@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/zing-mp3-front-end.iml" filepath="$PROJECT_DIR$/.idea/zing-mp3-front-end.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mp3-front-end.iml" filepath="$PROJECT_DIR$/.idea/mp3-front-end.iml" />
     </modules>
   </component>
 </project>
