@@ -15,7 +15,7 @@ function showListSinger() {
                                 </div>
                             </div>
                             <div class="event__item__text">
-                                <h4 href="#showInfo" class="btn btn-success" data-toggle="modal" onclick="showInformation(${singers[i].id})">${singers[i].singerName}</h4>
+                                <h4 href="#showInfo" class="btn btn-success my-button" data-toggle="modal" onclick="showInformation(${singers[i].id})">${singers[i].singerName}</h4>
                                 <p><i class="fa fa-map-marker"></i> ${singers[i].story}</p>
                             </div>
                         </div>
@@ -23,29 +23,21 @@ function showListSinger() {
                               `
             }
             document.getElementById("listSinger").innerHTML = `<div class=\"row\">` + `<div class=\"event__slider owl-carousel\">`
-                + `<div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="img/about/about.png" onclick="addSinger()">
-                            </div>
-                            <div class="event__item__text">
-                                <a href="musics/singer/createSinger.html"><i class="fa-solid fa-arrow-up-from-bracket"><h4>Add new singer</h4></i></a>
-                                <p>click to add</p>
-                            </div>
-                        </div>
-                    </div>`+ listSingers +  `</div>` + `</div>`;
+                + listSingers + `</div>` + `</div>`;
         },
         error: function () {
             alert("Không thể hiển thị danh sách ca sĩ!");
         }
     });
 }
+
 showListSinger();
 
-function addSinger(){
-    window.location.href="musics/singer/createSinger.html"
+function addSinger() {
+    window.location.href = "musics/singer/createSinger.html"
 }
 
-function showInformation(id){
+function showInformation(id) {
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/admin/singers/" + id,

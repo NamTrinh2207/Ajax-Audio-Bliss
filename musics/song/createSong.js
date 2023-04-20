@@ -49,6 +49,7 @@ function showListSong() {
                 vertical-align: middle;}
                 audio{
                 width: 80%;
+                color: #8540FB;
                 }
                 img{
                 border-radius: 50%;
@@ -110,4 +111,6 @@ function displaySearchSong(song) {
     document.getElementById("songs").innerHTML = search;
 }
 
-
+function addSong() {
+    window.location.href = "musics/song/createSong.html";
+}
