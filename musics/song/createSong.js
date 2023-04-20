@@ -42,11 +42,23 @@ function showListSong() {
             let songList = "";
             let url = "img/files/"
             for (let i = 0; i < song.length; i++) {
-                songList += `<div class="single_player_container">
+                songList += `                <style>
+                div #group, img, audio {
+                
+                display: inline-block;
+                vertical-align: middle;}
+                audio{
+                width: 80%;
+                }
+                img{
+                border-radius: 50%;
+                }
+                            </style><div class="single_player_container">
                             <h4>${song[i].musicName}</h4>
+                            <div><img id="group" width="50px" height="50px" src="${url + song[i].imageName}" alt="img song">
                             <audio controls>
                             <source src="${url + song[i].fileName}" type="audio/ogg">
-                            </audio>
+                            </audio></div>
                         </div>`
             }
             document.getElementById("songs").innerHTML = songList;
@@ -68,20 +80,31 @@ function searchSong() {
         }
     })
 }
+
 function encodeURIParams(data) {
     return Object.keys(data).map(function (key) {
         return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
     });
 }
+
 function displaySearchSong(song) {
     let search = "";
     let url = "img/files/"
     for (let i = 0; i < song.length; i++) {
-        search += `<div class="single_player_container">
+        search += ` <style>
+                div #group, img, audio {
+                
+                display: inline-block;
+                vertical-align: middle;}
+                audio{
+                width: 80%;
+                }
+                            </style><div class="single_player_container">
                             <h4>${song[i].musicName}</h4>
+                            <div><img id="group" width="50px" height="50px" src="${url + song[i].imageName}" alt="img song">
                             <audio controls>
                             <source src="${url + song[i].fileName}" type="audio/ogg">
-                            </audio>
+                            </audio></div>
                         </div>`
     }
     document.getElementById("songs").innerHTML = search;

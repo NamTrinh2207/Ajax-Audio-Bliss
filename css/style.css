@@ -31,6 +31,15 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding: 50px;
+}
+
+body {
+	scroll-behavior: smooth;
+	scroll-padding: 50px;
+}
 html,
 body {
 	height: 100%;
@@ -140,6 +149,7 @@ ol {
 }
 
 .set-bg {
+	max-height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
