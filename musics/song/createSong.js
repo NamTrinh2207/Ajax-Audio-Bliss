@@ -19,7 +19,7 @@ function uploadMusic() {
             'Accept': 'application/json',
         },
         type: "POST",
-        url: "http://localhost:8080/admin/musics/create",
+        url: "http://localhost:8080/musics/admin/create",
         data: music,
         contentType: false,
         processData: false,
@@ -36,7 +36,7 @@ function uploadMusic() {
 function showListSong() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/admin/musics",
+        url: "http://localhost:8080/musics",
         success: function (song) {
             console.log(song)
             let songList = "";
@@ -47,15 +47,44 @@ function showListSong() {
                             <audio controls>
                             <source src="${url + song[i].fileName}" type="audio/ogg">
                             </audio>
-                           
                         </div>`
             }
             document.getElementById("songs").innerHTML = songList;
         }
     })
 }
+
 showListSong();
 
-
+// search
+function searchSong() {
+    let name = $("#search").val().trim().toLowerCase();
+    let resultSearch = {"musicName": name,}
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/musics/search?" + encodeURIParams(resultSearch),
+        success: function (song) {
+            displaySearchSong(song)
+        }
+    })
+}
+function encodeURIParams(data) {
+    return Object.keys(data).map(function (key) {
+        return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+    });
+}
+function displaySearchSong(song) {
+    let search = "";
+    let url = "img/files/"
+    for (let i = 0; i < song.length; i++) {
+        search += `<div class="single_player_container">
+                            <h4>${song[i].musicName}</h4>
+                            <audio controls>
+                            <source src="${url + song[i].fileName}" type="audio/ogg">
+                            </audio>
+                        </div>`
+    }
+    document.getElementById("songs").innerHTML = search;
+}
 
 

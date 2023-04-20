@@ -7,7 +7,7 @@
     <meta name="keywords" content="DJoz, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DJoz | Template</title>
+    <title>Zing Mbappe</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="musics/singer/listSinger.js"></script>
-
 </head>
 
 <body>
@@ -39,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="" id="avatar" alt="ảnh đại diện"></a>
+                        <a href="./index.html"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10">
@@ -51,21 +50,17 @@
                                 <li><a href="./discography.html">Discography</a></li>
                                 <li><a href="./tours.html">Tours</a></li>
                                 <li><a href="./videos.html">Videos</a></li>
-                                <li><a href="#">Pages</a>
+                                <li><a href="#"><i class="fa fa-gear"></i></a>
                                     <ul class="dropdown">
-                                        <li><a href="./about.html">About</a></li>
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="./blog.html">Information</a></li>
+                                        <li><a href="#" onclick="logout()">Logout</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><img width="50" height="50" style="border-radius: 50%" src="" id="avatar" alt="ảnh đại diện"></li>
+                                <li id="user"></li>
                             </ul>
                         </nav>
                         <div class="header__right__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i onclick="logout()" class="fa fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -97,18 +92,19 @@
     <!-- Hero Section End -->
 
     <!-- Track Section Begin -->
+
     <section class="track spad">
         <div class="container">
+            <div class="input-group">
+                <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="song search..." id="search" oninput="searchSong()">
+                <span class="input-group-append">
+            </span>
+            </div>
+            <br><br>
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h2>Latest tracks</h2><span><a href="musics/song/createSong.html">Create song</a></span>
-                        <h1>Music podcast</h1>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="track__all">
-                        <a href="#" class="primary-btn border-btn">View all tracks</a>
+                        <h2>List Songs</h2><span><a href="musics/song/createSong.html">Create song</a></span>
                     </div>
                 </div>
             </div>

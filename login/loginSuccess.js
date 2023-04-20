@@ -24,6 +24,6 @@ if (user != null) {
 }
 
 function logout() {
-    localStorage.removeItem("object")
+    localStorage.removeItem("user")
     window.location.href = "http://localhost:63343/mp3-front-end/login/login.html";
 }
